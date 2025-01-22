@@ -1,0 +1,136 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>ICATOURS</title>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+</head> 
+<!-- Start of unica5383 Zendesk Widget script --><script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=78b0e01d-b19e-41ca-9c36-c036871e2f5d"> </script><!-- End of unica5383 Zendesk Widget script -->
+<body class="bg-gray-100 font-sans">  
+    <!-- Contenido de tu página aquí -->
+     <!-- Header -->
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">visita la real ICA</h1>
+      <nav>
+        <a href="#catalog" class="px-4 hover:underline">TOURS</a>
+        <a href="#contact" class="px-4 hover:underline">LLAMANOS</a>
+      </nav>
+    </div>
+  </header>
+   <!-- Hero Section -->
+  <section class="bg-blue-100 py-12">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Encuentra tu lugar perfecto</h2>
+      <p class="text-lg text-gray-700">lugares para cada ocasión, con la mejor calidad y alta diversion.</p>
+    </div>
+  </section>
+
+  <!-- Catalog -->
+  <section id="catalog" class="py-12">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">VISITANOS HOY</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <img src="https://th.bing.com/th/id/OIP.33tRtGdgpBebO8bQPXsCGgHaFE?rs=1&pid=ImgDetMain">
+          <h3 class="text-xl font-bold mt-4">LAS PALMERAS DE 7 CABEZAS</h3>
+          <p class="text-gray-600">Perfecto para el misterio que guarda.</p>
+          <p class="text-blue-600 font-bold mt-2">S/50.00</p>
+        </div>
+        <!-- Product 2 -->
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <img src="https://st2.depositphotos.com/1702382/8815/i/450/depositphotos_88151714-stock-photo-oasis-of-huacachina-ica-region.jpg">
+          <h3 class="text-xl font-bold mt-4">SUPER LAGUNA DE HUACACHINA</h3>
+          <p class="text-gray-600">CREELO ES REAL,ES HEMOSISIMA</p>
+          <p class="text-blue-600 font-bold mt-2">S/70.00</p>
+        </div>
+        <!-- Product 3 -->
+        <div class="bg-white shadow-md rounded-lg p-4">
+          <img src="https://www.tangol.com/blog/Fotos/Notas/las-12-mejores-playas-de-peru_1052_202006301044350.JPG">
+          <h3 class="text-xl font-bold mt-4">LA MEJOR PLAYA DE ICA "CARHUAZ"</h3>
+          <p class="text-gray-600">Elegancia naturaleza virgen muy cerca a tu alzanze.</p>
+          <p class="text-blue-600 font-bold mt-2">S/90.00</p>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+    <!-- Chatbot -->  
+    <div id="chatbot" class="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 w-80 hidden">  
+        <div class="flex justify-between items-center">  
+            <h3 class="text-lg font-bold">Asistente Virtual</h3>  
+            <button id="closeChat" class="text-red-500 font-bold">X</button>  
+        </div>  
+        <div id="chatContent" class="mt-4 h-48 overflow-y-auto border-t pt-2">  
+            <p class="text-gray-600">Hola, ¿en qué puedo ayudarte?</p>  
+        </div>  
+        <input id="chatInput" type="text" placeholder="Escribe tu mensaje..." class="mt-2 w-full border rounded-md p-2">  
+        <button id="sendChat" class="bg-blue-600 text-white px-4 py-2 rounded-md mt-2 w-full">Enviar</button>  
+        <div class="mt-2">  
+            <p class="text-gray-600">O selecciona una pregunta:</p>  
+            <ul>  
+                <li><button class="question-btn text-blue-600" data-response="Nuestros horarios de atención son de lunes a viernes de 9:00 AM a 6:00 PM.">¿Cuáles son los horarios de atención?</button></li>  
+                <li><button class="question-btn text-blue-600" data-response="si en nuestro catalogo podras encontrar diversos lugares que te encantaran.">¿tiene mas lugares para visitar?</button></li>  
+                <li><button class="question-btn text-blue-600" data-response="Aceptamos YAPE,PLIM,pagos con tarjeta de crédito, débito y transferencias bancarias.">¿Qué métodos de pago aceptan?</button></li>  
+                <li><button class="question-btn text-blue-600" data-response="Te devolvemos hasta el chizito que te tragaste en 3 dias">¿No gusta los lugares hay devolucion?</button></li>  
+                <li><button class="question-btn text-blue-600" data-response="has click en el boton amarillo de la parte inferior derecha de la pantalla.">¿Quieres chatear con un asesor en vivo? <a href="URL"></a></button></li>  
+            </ul>  
+        </div>  
+    </div>  
+    <button id="openChat" class="fixed bottom-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg">Chat</button>  
+
+    <script>  
+        const openChat = document.getElementById('openChat');  
+        const closeChat = document.getElementById('closeChat');  
+        const chatbot = document.getElementById('chatbot');  
+        const chatContent = document.getElementById('chatContent');  
+        const chatInput = document.getElementById('chatInput');  
+        const sendChat = document.getElementById('sendChat');  
+
+        openChat.addEventListener('click', () => {  
+            chatbot.classList.remove('hidden');  
+            openChat.classList.add('hidden');  
+        });  
+
+        closeChat.addEventListener('click', () => {  
+            chatbot.classList.add('hidden');  
+            openChat.classList.remove('hidden');  
+        });  
+
+        sendChat.addEventListener('click', () => {  
+            const userMessage = chatInput.value.trim();  
+            if (userMessage) {  
+                const userBubble = document.createElement('p');  
+                userBubble.className = 'text-blue-600 text-right';  
+                userBubble.textContent = userMessage;  
+                chatContent.appendChild(userBubble);  
+
+                const botBubble = document.createElement('p');  
+                botBubble.className = 'text-gray-600';  
+                botBubble.textContent = 'Gracias por tu mensaje. Te responderemos pronto.';  
+                chatContent.appendChild(botBubble);  
+
+                chatInput.value = '';  
+                chatContent.scrollTop = chatContent.scrollHeight;  
+            }  
+        });  
+
+        document.querySelectorAll('.question-btn').forEach(button => {  
+            button.addEventListener('click', () => {  
+                const botResponse = button.getAttribute('data-response');  
+
+                // Add bot's response to chat  
+                const botBubble = document.createElement('p');  
+                botBubble.className = 'text-gray-600 mt-2';  
+                botBubble.textContent = botResponse;  
+                chatContent.appendChild(botBubble);  
+
+                // Scroll to the bottom of the chat  
+                chatContent.scrollTop = chatContent.scrollHeight;  
+            });  
+        });  
+    </script>  
+</body>  
+</html>
